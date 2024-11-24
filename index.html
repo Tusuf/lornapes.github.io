@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LorNapes - Paylaşım</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>LorNapes</h1>
+            <nav>
+                <a href="#home">Ana Sayfa</a>
+                <a href="#about">Hakkında</a>
+                <a href="#posts">Yazılar</a>
+                <a href="#share">Paylaşımlar</a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Hoş Geldiniz!</h2>
+        <p>Kendi yaptığım yazılarımı ve yazılımlarımı paylaştığım kişisel sitem.</p>
+        <button onclick="scrollToSection('#posts')">Yazılara Git</button>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Hakkında</h2>
+        <p>Resmi takılmayı sevmem, basitce yazılımlarımı paylaşacağım site.</p>
+    </section>
+
+    <section id="posts" class="posts">
+        <h2>Yazılar</h2>
+        <div class="post">
+            <h3>Bu site ne için açıldı?</h3>
+            <p>Kendimi kodlamada geliştirmek için (HTML, CSS, JavaScript) ve eğlencesine.</p>
+        </div>
+        <div class="post">
+            <h3>YouTube Kanalım</h3>
+            <p>
+                bu adamın kanalı varmış aga bakman lazım 
+                <a href="https://youtube.com/@LorNapes" target="_blank">youtube.com/@LorNapes</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="share" class="share">
+        <h2>Paylaşımlar</h2>
+        <div class="shared-software">
+            <h3>Tupad 0.3</h3>
+            <p>Bilgisayarındaki klasik not defterinden sıkıldın mı? Tupad tam sana göre!</p>
+            <p><strong>Eklendi:</strong> 20 Kasım 2024</p>
+            <a href="https://github.com/Tusuf/Tupad/releases/tag/Tupad-0.3" target="_blank">📥 İndir</a>
+        </div>
+        <div class="shared-software">
+            <h3>Snipping Tool 0.1</h3>
+            <p>Bağımsız, veri toplamayan, kullanıcı dostu bir Ekran Alıntısı Aracı.</p>
+            <p><strong>Eklendi:</strong> 18 Kasım 2024</p>
+            <a href="https://github.com/Tusuf/Snipping-Tool/releases/tag/0.1" target="_blank">📥 İndir</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 LorNapes. Tüm hakları saklıdır. (çok resmi site)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

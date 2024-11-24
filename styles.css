@@ -1,0 +1,192 @@
+/* styles.css */
+
+/* Renk Değişkenleri */
+:root {
+  --bg-color-light: #f4f4f4;
+  --bg-color-dark: #121212;
+  --text-color-light: #121212;
+  --text-color-dark: #e0e0e0;
+  --accent-color: #bb86fc;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1e1e1e;
+  --hover-color: #3700b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Temel Stil Kuralları */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+header {
+  background: var(--card-bg-light);
+  padding: 20px 0;
+  transition: background 0.3s;
+}
+
+body.dark-mode header {
+  background: var(--card-bg-dark);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--text-color-light);
+  margin: 0 15px;
+  font-weight: 600;
+}
+
+body.dark-mode header nav a {
+  color: var(--text-color-dark);
+}
+
+header nav a:hover {
+  color: var(--accent-color);
+}
+
+button.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body.dark-mode button.theme-toggle {
+  color: var(--text-color-dark);
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: var(--card-bg-light);
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+
+body.dark-mode .hero {
+  background: var(--card-bg-dark);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+
+.hero p {
+  margin: 10px 0 20px;
+}
+
+button {
+  background: var(--accent-color);
+  color: var(--text-color-light);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--hover-color);
+}
+
+.posts, .about, .share {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts h2, .about h2, .share h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.posts .post, .shared-software {
+  background: var(--card-bg-light);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s;
+}
+
+body.dark-mode .posts .post,
+body.dark-mode .shared-software {
+  background: var(--card-bg-dark);
+}
+
+.shared-software a {
+  color: var(--text-color-light); /* Buton metni açık renk */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: var(--accent-color); /* Buton arka plan rengi */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .shared-software a {
+  color: var(--text-color-dark); /* Karanlık temada buton metni koyu renk */
+  background-color: var(--accent-color); /* Karanlık temada buton arka planı */
+}
+
+.shared-software a:hover {
+  background-color: var(--hover-color); /* Hover durumunda butonun arka planı */
+  color: #fff; /* Hover durumunda yazı rengi beyaz olur */
+}
+
+body.dark-mode .shared-software a:hover {
+  background-color: #6200ea; /* Karanlık temada butonun hover rengi */
+  color: #ffffff; /* Karanlık temada hover durumunda beyaz metin rengi */
+}
+
+/* Duyarlı Tasarım */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  header nav a {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .shared-software {
+    padding: 15px;
+  }
+}
